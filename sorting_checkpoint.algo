@@ -1,0 +1,22 @@
+PROCEDURE swap(VAR xp, VAR yp : INTEGER)
+VAR
+    tmp : INTEGER
+BEGIN
+    tmp:= x ;
+    x:= y ;
+    y:= tmp
+END
+
+ALGORITHM sorting_cards_checkpoint
+VAR
+    tab : ARRAY_OF INTEGER [14]
+    i : INTEGER := 0;
+    n : INTEGER
+BEGIN
+FOR i FROM 0 TO 13 STEP 1  DO
+    read (n)
+    IF (tab[n]>tab[n-1]) THEN
+        swap (tab[n],tab[n-1]) 
+    END_IF
+    END_FOR
+END
